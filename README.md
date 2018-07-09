@@ -17,16 +17,16 @@ Through Natural Gradient, the ML community has come to learn that *F* is actuall
 
 As it happens, the physics community is still attempting to understand what this metric means in the context of thermodynamics. Some intriguing hints have surfaced in the past few years.
 - Like any metric, *F* can be used to compute the lengths of curves, and it turns out that the curves shortest curves represent ways of varying the control parameters of systems such that minimal energy is dissipated in traveling between the two endpoint configurations.
+- Singularities in *F* (and, it seems more likely, in the corresponding Ricci curvature tensor *R*) correspond to phase transitions, in paricular second-order ("critical") phase transitions. These curved (and singular) geometries have even been computed in some simple cases, as the figure illustrates for the Ising model of magnetism in physics (Rotskoff and Crooks):
 <img src="https://github.com/AI-RG/hello-world/blob/master/ai_phys_assets/ising-model.png" alt="Ising" width="500px" />
 
-- Singularities in *F* (and, it seems more likely, in the corresponding Ricci curvature tensor *R*) correspond to phase transitions, in paricular second-order ("critical") phase transitions.
 
 To my knowledge, these facts have yet to be translated back into the language of machine learning. Here is my interpretation:
 
-- Equilibrium corresponds to stabilized learning: the parameters of the network have converged to their optimal values given the data distribution.
+- Equilibrium corresponds to stabilized learning: the parameters of the network have converged to their optimal values given the training distribution.
 - Dissipation corresponds to misprediction: in transit between training distributions 1 and 2, the network is exposed to the data of 2 but is not yet adapted to this distribution. Dissipation corresponds to total integrated difference between the training distribution 2 and the model's distribution, where the integration is along the trajectory in model space.
 
-Understanding this analogy more quantitatively would be a nice step toward understanding Elastic Weight Consolidation and Natural Gradient methods more precisely.
+Understanding this analogy more quantitatively would be provide an additional perspective on Elastic Weight Consolidation and Natural Gradient methods.
 
 ## Entropy, Fluctuations, and Reinforcement Learning
 

@@ -44,10 +44,17 @@ where
 
 <img src="https://github.com/AI-RG/hello-world/blob/master/ai_phys_assets/etropy5.gif" alt="eq5" />
 
-and where 
+represents the variance of the empirical current (running time average of transitions from *a* to *b* along edge *(a,b)*. In fact, the "generalized current" can be any linear combination of currents along edges:
 
-<img src="https://github.com/AI-RG/hello-world/blob/master/ai_phys_assets/entropy2.gif" alt="eq2" />
-<img src="https://github.com/AI-RG/hello-world/blob/master/ai_phys_assets/entropy3.gif" alt="eq3" />
+<img src="https://github.com/AI-RG/hello-world/blob/master/ai_phys_assets/entropy3.gif" alt="current" />
+
+In the above,
+
+<img src="https://github.com/AI-RG/hello-world/blob/master/ai_phys_assets/entropy6.gif" alt="sigma" />
+
+which in the physics context would represent dissipation. In this formula, F represents a generalized force, but can be defined in terms of microscopic variables as follows:
+
+<img src="https://github.com/AI-RG/hello-world/blob/master/ai_phys_assets/entropy2.gif" alt="force" />
 
 
 ## Bibliography

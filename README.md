@@ -17,6 +17,8 @@ Through Natural Gradient, the ML community has come to learn that *F* is actuall
 
 As it happens, the physics community is still attempting to understand what this metric means in the context of thermodynamics. Some intriguing hints have surfaced in the past few years.
 - Like any metric, *F* can be used to compute the lengths of curves, and it turns out that the curves shortest curves represent ways of varying the control parameters of systems such that minimal energy is dissipated in traveling between the two endpoint configurations.
+<img src="https://github.com/AI-RG/hello-world/blob/master/ai_phys_assets/ising-model.png" alt="Ising" width="500px" />
+
 - Singularities in *F* (and, it seems more likely, in the corresponding Ricci curvature tensor *R*) correspond to phase transitions, in paricular second-order ("critical") phase transitions.
 
 To my knowledge, these facts have yet to be translated back into the language of machine learning. Here is my interpretation:
@@ -52,15 +54,17 @@ In the above,
 
 <img src="https://github.com/AI-RG/hello-world/blob/master/ai_phys_assets/entropy6.gif" alt="sigma" />
 
-which in the physics context would represent dissipation. In this formula, F represents a generalized force, but can be defined in terms of microscopic variables as follows:
+which in the physics context would represent dissipation. In this formula, *F* represents a generalized force, but can be defined in terms of microscopic variables as follows:
 
 <img src="https://github.com/AI-RG/hello-world/blob/master/ai_phys_assets/entropy2.gif" alt="force" />
 
+This inequality (derived and discussed at length in T. Gingrich et al.) has an interesting interpretation. For any current, one might seek to reduce the variance. However, once a certain efficiency is reached, any further decrease of current variance must come at an increase of dissipaiton (Sigma).
+
+This tradeoff suggests that we focus on Sigma, which is perfectly well defined in the RL setting. For the generalized current, one interesting choice is a reward current, i.e. the sum of transition currents weighted by the rewards of those transitions. It is very plausible that large fluctuations in reward are undesirable. Even if convergence to a good average reward is guaranteed, it might be necessary in e.g. robotics applications to have bounds on the likelihood of periods of lower-than-average reward. It is precisely such bounds that this inequality can provide. Exploring the implications in an explicit RL setting would be illuminating.
 
 ## Bibliography
 
-
-
+- T. Gingrich et al., "Dissipation bounds all steady-state current fluctuations" (arXiv:1512.02212)
 - G. Crooks, "Entropy production fluctuation theorem and the nonequilibrium work relation for free energy differences" (arXiv: cond-mat/9901352)
 - D. Sivak and G. Crooks, "Thermodynamic Metrics and Optimal Paths" (arXiv: 1201.4166)
 - M. Prokopenko et al., "Relating Fisher Information to Order Parameters" Phys. Rev. E 84 (2011)

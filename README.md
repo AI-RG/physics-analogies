@@ -30,16 +30,29 @@ Understanding this analogy more quantitatively would be a nice step toward under
 
 A remarkable result in 1999 showed that entropy production is directly related to microscopic reversibility, viz.
 
+<img src="https://github.com/AI-RG/hello-world/blob/master/ai_phys_assets/entropy1.gif" alt="eq1" />
+
 In other words, the difference of log likelihoods of forward to reverse trajectories is proportional to the net entropy procuced along the (forward) trajectory. To rephrase: not only does entropy tend to increase with time, but entropy actually *quantifies* how likely a process is compared to its reverse.
 
 Following this insight, there arose several *fluctuation theorems* that quantify the likelihood of statistical fluctuations, usually in terms of entropy.
 
 Such fluctuation theorems may be useful in the context of Reinforcement Learning. For example, for any Markov process with reversible transitions, we have the following inequality:
 
-<img src="https://github.com/AI-RG/hello-world/blob/master/ai_phys_assets/entropy1.gif" alt="eq1" />
+<img src="https://github.com/AI-RG/hello-world/blob/master/ai_phys_assets/entropy4.gif" alt="eq4" />
+
+where
+
+<img src="https://github.com/AI-RG/hello-world/blob/master/ai_phys_assets/etropy5.gif" alt="eq5" />
+
+and where 
+
+<img src="https://github.com/AI-RG/hello-world/blob/master/ai_phys_assets/entropy2.gif" alt="eq2" />
+<img src="https://github.com/AI-RG/hello-world/blob/master/ai_phys_assets/entropy3.gif" alt="eq3" />
 
 
 ## Bibliography
+
+
 
 - G. Crooks, "Entropy production fluctuation theorem and the nonequilibrium work relation for free energy differences" (arXiv: cond-mat/9901352)
 - D. Sivak and G. Crooks, "Thermodynamic Metrics and Optimal Paths" (arXiv: 1201.4166)
